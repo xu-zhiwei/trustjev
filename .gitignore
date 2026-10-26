@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+outputs/
+models/
+# User-supplied data and model artifacts.
+*.jsonl
+*.pt
+*.safetensors
+.env
+/data/
+/datasets/
+*.parquet
+*.arrow
+*.csv
+*.tsv

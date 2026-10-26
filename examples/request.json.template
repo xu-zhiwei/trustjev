@@ -1,0 +1,8 @@
+{
+  "policy": "<trusted_policy>",
+  "evidence": "<external_evidence>",
+  "options": [
+    "<candidate_a>",
+    "<candidate_b>"
+  ]
+}

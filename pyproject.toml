@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trustjev"
+version = "0.1.0"
+description = "Trust-aware counterfactual learning for finite-candidate security decisions"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+dependencies = [
+    "torch==2.10.0",
+    "transformers==5.6.2",
+    "peft==0.21.2",
+    "numpy==2.2.6",
+    "safetensors==0.8.0",
+    "PyYAML==6.0.3",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

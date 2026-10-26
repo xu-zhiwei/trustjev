@@ -1,0 +1,29 @@
+# Reference training hyperparameters used in our experiments.
+# Adapt optimization and loss settings to your model, data and resources.
+# Keep architecture settings consistent with the selected training stage.
+stage: stage2
+epochs: 2
+lr: 0.00005
+group_batch: 2
+weight_decay: 0.01
+invariance_weight: 0.0075
+counterfactual_weight: 0.0075
+authority_weight: 0.025
+margin_weight: 0.025
+margin_slack: 1.0
+adversarial_weight: 0.25
+adversarial_invariance_weight: 0.0075
+gradient_checkpointing: true
+model:
+  base_model: /path/to/model
+  local_files_only: true
+  rank: 8
+  dropout: 0.05
+  beta_max: 8.0
+  context_mix: 0.5
+  centered_residual: true
+  protected: true
+  interaction: true
+  max_tokens: 1536
+  control_tokens: ["<|fim_prefix|>", "<|fim_middle|>", "<|fim_suffix|>"]
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
